@@ -3,7 +3,7 @@ package com.ApiRest.ApiRest.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "login")
 public class UsuarioModel {
 
     @Id
@@ -12,6 +12,7 @@ public class UsuarioModel {
     private Long id;
     private String nombre;
     private String email;
+    private String contrasena;
     private Integer prioridad;
 
     public void setPrioridad(Integer prioridad){
@@ -40,6 +41,12 @@ public class UsuarioModel {
     }
     public void setEmail(String email) {
         this.email = email;
+    }
+    public String getContrasena() {
+        return contrasena;
+    }
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
 }
